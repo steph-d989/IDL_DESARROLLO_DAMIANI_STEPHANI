@@ -1,0 +1,19 @@
+especie,etapa,necesidad,categoria
+Cerdo,Joven,Nutrición,Suplementos nutricionales
+Cerdo,Adulto,Nutrición,Suplementos nutricionales
+Pollo,Joven,Nutrición,Suplementos nutricionales
+Pollo,Adulto,Nutrición,Suplementos nutricionales
+Bovino,Joven,Nutrición,Suplementos nutricionales
+Bovino,Adulto,Nutrición,Suplementos nutricionales
+Cerdo,Joven,Higiene,Higiene y bioseguridad
+Cerdo,Adulto,Higiene,Higiene y bioseguridad
+Pollo,Joven,Higiene,Higiene y bioseguridad
+Pollo,Adulto,Higiene,Higiene y bioseguridad
+Bovino,Joven,Higiene,Higiene y bioseguridad
+Bovino,Adulto,Higiene,Higiene y bioseguridad
+Cerdo,Joven,Manejo,Insumos de manejo
+Cerdo,Adulto,Manejo,Insumos de manejo
+Pollo,Joven,Manejo,Insumos de manejo
+Pollo,Adulto,Manejo,Insumos de manejo
+Bovino,Joven,Manejo,Insumos de manejo
+Bovino,Adulto,Manejo,Insumos de manejo

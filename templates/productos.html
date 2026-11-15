@@ -1,44 +1,242 @@
+
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="grid text-center">
-            <div class="g-col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">Antibioticos</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut veritatis perspiciatis placeat mollitia sapiente ratione exercitationem, dolore fugiat quidem</p>
-                    </div>    
-                    <div class="card-body flex-row gap-4">
-                        <a href="#">Card link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="g-col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">Antibioticos</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut veritatis perspiciatis placeat mollitia sapiente ratione exercitationem, dolore fugiat quidem</p>
-                    </div>    
-                    <div class="card-body flex-row gap-4">
-                        <a href="#">Card link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="g-col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">Antibioticos</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut veritatis perspiciatis placeat mollitia sapiente ratione exercitationem, dolore fugiat quidem</p>
-                    </div>    
-                    <div class="card-body flex-row gap-4">
-                        <a href="#">Card link</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
+<section class="text-center mb-5">
+
+    <h1 class="fw-bold text-success">
+        Nuestros Productos
+    </h1>
+
+    <p class="lead">
+        Conoce nuestras principales categorías
+        de productos veterinarios.
+    </p>
+
+</section>
+
+<section class="row g-4">
+
+    <div class="col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body text-center">
+
+                <div class="fs-1 mb-3">
+                    💊
+                </div>
+
+                <h4 class="card-title text-success">
+                    Antibióticos
+                </h4>
+
+                <span class="badge bg-success mb-3">
+                    Uso veterinario
+                </span>
+
+                <p class="card-text">
+                    Medicamentos veterinarios utilizados
+                    para tratar determinadas infecciones
+                    bacterianas bajo indicación profesional.
+                </p>
+
+            </div>
+
+            <div class="card-footer bg-white text-center">
+
+                <button
+                    class="btn btn-outline-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalAntibioticos">
+                    Ver información
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body text-center">
+
+                <div class="fs-1 mb-3">
+                    🧪
+                </div>
+
+                <h4 class="card-title text-success">
+                    Vitaminas y Suplementos
+                </h4>
+
+                <span class="badge bg-primary mb-3">
+                    Nutrición animal
+                </span>
+
+                <p class="card-text">
+                    Productos destinados a complementar
+                    la nutrición de los animales durante
+                    sus distintas etapas productivas.
+                </p>
+
+            </div>
+
+            <div class="card-footer bg-white text-center">
+
+                <button
+                    class="btn btn-outline-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalVitaminas">
+                    Ver información
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body text-center">
+
+                <div class="fs-1 mb-3">
+                    🧼
+                </div>
+
+                <h4 class="card-title text-success">
+                    Higiene y Bioseguridad
+                </h4>
+
+                <span class="badge bg-info text-dark mb-3">
+                    Prevención
+                </span>
+
+                <p class="card-text">
+                    Productos utilizados para apoyar
+                    los procedimientos de limpieza,
+                    desinfección y bioseguridad
+                    de instalaciones pecuarias.
+                </p>
+
+            </div>
+
+            <div class="card-footer bg-white text-center">
+
+                <button
+                    class="btn btn-outline-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalBioseguridad">
+                    Ver información
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<div class="modal fade" id="modalAntibioticos" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Antibióticos veterinarios
+                </h5>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Los antibióticos se utilizan para tratar
+                infecciones bacterianas específicas.
+                Su administración debe realizarse
+                bajo indicación veterinaria,
+                respetando dosis y tiempos de retiro.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalVitaminas" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Vitaminas y suplementos
+                </h5>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Los suplementos nutricionales
+                ayudan a complementar la alimentación
+                según los requerimientos de cada especie
+                y etapa productiva.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBioseguridad" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Higiene y bioseguridad
+                </h5>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                La limpieza y desinfección
+                de instalaciones son medidas
+                importantes para reducir
+                los riesgos sanitarios
+                en la producción animal.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 {% endblock %}

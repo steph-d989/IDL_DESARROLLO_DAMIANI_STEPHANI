@@ -1,1 +1,174 @@
+
 {% extends "layout.html" %}
+
+{% block content %}
+
+<section class="text-center mb-5">
+
+    <h1 class="fw-bold text-success">
+        Modelo de Inteligencia Artificial
+    </h1>
+
+    <p class="lead">
+        Clasificador de categorías de productos veterinarios
+    </p>
+
+</section>
+
+<section class="row justify-content-center">
+
+    <div class="col-md-8 col-lg-6">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">
+                    Realizar predicción
+                </h4>
+            </div>
+
+            <div class="card-body p-4">
+
+                <form action="/models" method="POST">
+
+                    <div class="mb-3">
+
+                        <label for="especie" class="form-label">
+                            Especie animal
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="especie"
+                            name="especie"
+                            required
+                        >
+                            <option value="Cerdo"
+                                {% if valores.especie == 'Cerdo' %}selected{% endif %}>
+                                Cerdo
+                            </option>
+
+                            <option value="Pollo"
+                                {% if valores.especie == 'Pollo' %}selected{% endif %}>
+                                Pollo
+                            </option>
+
+                            <option value="Bovino"
+                                {% if valores.especie == 'Bovino' %}selected{% endif %}>
+                                Bovino
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="etapa" class="form-label">
+                            Etapa del animal
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="etapa"
+                            name="etapa"
+                            required
+                        >
+                            <option value="Joven"
+                                {% if valores.etapa == 'Joven' %}selected{% endif %}>
+                                Joven
+                            </option>
+
+                            <option value="Adulto"
+                                {% if valores.etapa == 'Adulto' %}selected{% endif %}>
+                                Adulto
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label for="necesidad" class="form-label">
+                            Necesidad principal
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="necesidad"
+                            name="necesidad"
+                            required
+                        >
+                            <option value="Nutrición"
+                                {% if valores.necesidad == 'Nutrición' %}selected{% endif %}>
+                                Nutrición
+                            </option>
+
+                            <option value="Higiene"
+                                {% if valores.necesidad == 'Higiene' %}selected{% endif %}>
+                                Higiene
+                            </option>
+
+                            <option value="Manejo"
+                                {% if valores.necesidad == 'Manejo' %}selected{% endif %}>
+                                Manejo
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="d-grid">
+
+                        <button
+                            type="submit"
+                            class="btn btn-success btn-lg"
+                        >
+                            Realizar predicción
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        {% if error %}
+
+        <div class="alert alert-danger mt-4" role="alert">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+        {% if resultado %}
+
+        <div class="alert alert-success mt-4">
+
+            <h4 class="alert-heading">
+                Resultado de la IA
+            </h4>
+
+            <hr>
+
+            <p>
+                <strong>Categoría predicha:</strong>
+            </p>
+
+            <h5>
+                {{ resultado.categoria }}
+            </h5>
+
+            <p class="mt-3 mb-0">
+                {{ resultado.descripcion }}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}
