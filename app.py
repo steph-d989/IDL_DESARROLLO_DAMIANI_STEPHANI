@@ -16,8 +16,6 @@ CATEGORIAS = {
     'Insumos de manejo': 'Productos de apoyo para el manejo general de los animales.',
 }
 
-
-
 def entrenar_modelo():
 
     with (BASE / 'data' / 'entrenamiento.csv').open(
